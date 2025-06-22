@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(120deg, #ffe9ec, #d1e7ff);
@@ -74,3 +75,81 @@ input {
   margin: 20px;
   font-size: 18px;
 }
+=======
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(120deg, #ffe9ec, #d1e7ff);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 90%;
+  padding: 12px;
+  margin: 10px 0;
+  font-size: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.button-row button {
+  padding: 12px 20px;
+  margin: 10px 5px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.button-row button:hover {
+  background-color: #0056b3;
+}
+
+.ludo-board {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  position: relative;
+  border-radius: 5px;
+}
+
+.token {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  transition: 0.3s;
+}
+
+.red { background-color: red; }
+.green { background-color: green; }
+.yellow { background-color: gold; }
+.blue { background-color: blue; }
+
+.status-bar {
+  margin: 20px;
+  font-size: 18px;
+}
+>>>>>>> 737c041ba2a0bcabe4b586ba597c37bd45252078

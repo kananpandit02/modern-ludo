@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,3 +36,42 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Ludo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎲 Modern Ludo</h1>
+    <input type="text" id="roomInput" placeholder="Enter Room Code" />
+    <div class="button-row">
+      <button onclick="createRoom()">Create Room</button>
+      <button onclick="joinRoom()">Join Room</button>
+    </div>
+    <div class="info">Room Code will be saved locally.</div>
+  </div>
+
+  <script>
+    function createRoom() {
+      const code = Math.random().toString(36).substr(2, 6);
+      localStorage.setItem('roomCode', code);
+      localStorage.setItem('player', 'player1');
+      window.location.href = 'game.html';
+    }
+
+    function joinRoom() {
+      const input = document.getElementById('roomInput').value.trim();
+      if (!input) return alert('Enter valid room code');
+      localStorage.setItem('roomCode', input);
+      localStorage.setItem('player', 'computer');
+      window.location.href = 'game.html';
+    }
+  </script>
+</body>
+</html>
+>>>>>>> 737c041ba2a0bcabe4b586ba597c37bd45252078
