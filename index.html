@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Ludo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="menu">
+    <h1>🎲 Modern Ludo</h1>
+    <button onclick="createRoom()">Create Room</button>
+    <button onclick="joinRoom()">Join Room</button>
+    <button onclick="playVsComputer()">Play vs Computer</button>
+  </div>
+
+  <script>
+    function createRoom() {
+      const code = Math.random().toString(36).substr(2, 6);
+      localStorage.setItem("roomCode", code);
+      localStorage.setItem("player", "player1");
+      location.href = "game.html";
+    }
+
+    function joinRoom() {
+      const code = prompt("Enter room code:");
+      if (!code) return;
+      localStorage.setItem("roomCode", code.trim());
+      localStorage.setItem("player", "player2");
+      location.href = "game.html";
+    }
+
+    function playVsComputer() {
+      localStorage.setItem("roomCode", "123");
+      localStorage.setItem("player", "player1");
+      localStorage.setItem("vsComputer", "true");
+      location.href = "game.html";
+    }
+  </script>
+</body>
+</html>

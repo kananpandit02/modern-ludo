@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ludo Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="topbar">
+    <p>Room: <span id="roomCodeDisplay">-</span></p>
+    <p>You: <span id="playerRole">-</span></p>
+    <p>Turn: <span id="currentTurn">-</span></p>
+    <p>Dice: <span id="diceResult">-</span></p>
+    <button onclick="rollDice()">Roll Dice 🎲</button>
+  </div>
+
+  <div id="board" class="board"></div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
