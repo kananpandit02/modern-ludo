@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ludo Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
   <div class="topbar">
@@ -14,33 +14,27 @@
     <p>Dice: <span id="diceResult">-</span></p>
     <button onclick="rollDice()">Roll Dice 🎲</button>
   </div>
-
   <div id="board" class="board"></div>
 
-  <!-- ✅ Firebase setup + game logic -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
     import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
 
-    // ✅ Your Firebase Config
     const firebaseConfig = {
       apiKey: "AIzaSyCR6lf41OC9NOG04PW0b_IQvjDn1qB-F5E",
       authDomain: "modern-ludo.firebaseapp.com",
       databaseURL: "https://modern-ludo-default-rtdb.asia-southeast1.firebasedatabase.app",
       projectId: "modern-ludo",
-      storageBucket: "modern-ludo.firebasestorage.app",
+      storageBucket: "modern-ludo.appspot.com",
       messagingSenderId: "618376946712",
       appId: "1:618376946712:web:a8aac0bccec95f864a8f6d"
     };
 
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
-
-    // ✅ Expose firebase tools for use in script.js
     window.firebaseInfo = { db, ref, set, onValue };
 
-    // ✅ Now load game logic
-    import('./script.js');
+    import './script.js';
   </script>
 </body>
 </html>
